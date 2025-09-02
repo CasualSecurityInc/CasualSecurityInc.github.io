@@ -39,16 +39,16 @@ header {
     color: #fff;
     padding: 10px;
     text-align: center;
-    border-top: 3px solid #f8f4e8; /* Lighter tan */
-    border-left: 3px solid #f8f4e8; /* Lighter tan */
-    border-right: 3px solid #a89680; /* Darker tan */
-    border-bottom: 3px solid #a89680; /* Darker tan */
+    border-top: 3px solid #9fb8ba; /* Lighter tan */
+    border-left: 3px solid #9fb8ba; /* Lighter tan */
+    border-right: 3px solid #2f5e6b; /* Darker tan */
+    border-bottom: 3px solid #2f5e6b; /* Darker tan */
 }
 
 main {
     max-width: 960px;
     margin: 20px auto;
-    background-color: #a8988f; /* Lighter, less saturated tan */
+    background-color: #aa9790; /* Lighter, less saturated tan */
     border-top: 3px solid #a89680; /* Darker tan */
     border-left: 3px solid #a89680; /* Darker tan */
     border-right: 3px solid #f8f4e8; /* Lighter tan */
@@ -98,6 +98,7 @@ main {
     /*border: 1px solid #f19a69;*/
     padding: 20px;
     flex-grow: 1;
+    border-bottom: solid 2px #88756d;
 }
 
 h2 {
@@ -119,15 +120,15 @@ h2 {
 }
 
 footer {
-    background-color: #b9858e; /* Salmon accent color */
+    background-color: #bc878f; /* Salmon accent color */
     color: #e0e0e0;
     padding: 10px;
     text-align: center;
     margin-top: 20px;
-    border-top: 3px solid #f8f4e8; /* Lighter tan */
-    border-left: 3px solid #f8f4e8; /* Lighter tan */
-    border-right: 3px solid #a89680; /* Darker tan */
-    border-bottom: 3px solid #a89680; /* Darker tan */
+    border-top: 3px solid #cfc2c7; /* Lighter tan */
+    border-left: 3px solid #cfc2c7; /* Lighter tan */
+    border-right: 3px solid #685461; /* Darker tan */
+    border-bottom: 3px solid #685461; /* Darker tan */
 }
 
 nav {
@@ -143,11 +144,10 @@ nav {
     /*padding: 10px;*/
 }
 
-aside {
-}
-
 @media (max-width: 800px) {
-    header, main, footer {
+    header,
+    main,
+    footer {
         width: 95%;
         margin-left: auto;
         margin-right: auto;
