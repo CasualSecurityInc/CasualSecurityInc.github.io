@@ -8,15 +8,17 @@
 </head>
 <body>
     <header>
-        <h1>🤷 Casual Security Incorporated</h1>
+        <a href="/"><h1>🤷 Casual Security Incorporated</h1></a>
     </header>
     <main>
         <aside class="sidebar">
             <nav>
+                <img src="/images/gizmos.png" alt="Install Wizard Gizmos" style="display: block; margin: 0 auto;" width="132" height="132">
                 <ul>
-                    <li><a href="#" class="active">Welcome</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+                    {# <li><a href="/about/" {% if page.url == "/about/" %}class="active"{% endif %}>About</a></li> #}
+                    {# <li><a href="/cv/" {% if page.url == "/cv/" %}class="active"{% endif %}>CV</a></li> #}
+                    <li><a href="/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
                 </ul>
             </nav>
         </aside>

@@ -13,3 +13,5 @@ Short, focused engagements that keep systems running and secure—practical help
 - **Software and infrastructure consulting** (architecture reviews, right‑sized recommendations)
 
 You’ll get a concise report and an action plan you can execute. Start with a short assessment—no retainers, no lock‑in.
+
+**[Contact us for a consultation](/contact/)**

@@ -30,6 +30,10 @@ header h1 {
         0 0 8px rgba(90, 177, 198, 0.25);
 }
 
+header a {
+    text-decoration: none; /* Remove underline from header link */
+}
+
 header {
     background-color: #4694a8;
     color: #fff;
@@ -70,7 +74,7 @@ main {
 
 .sidebar nav ul {
     list-style: none;
-    padding: 20px;
+    padding: 5px 20px 20px 20px; /* Changed top padding to 5px */
     margin: 0;
 }
 
@@ -130,11 +134,10 @@ nav {
     /*width: 100%;*/
     background-color: #ffffff;
     /*border-bottom: 2px solid #a89680;*/
-    padding-top: 120px;
-    background-image: url("/images/wiz.png");
-    background-repeat: no-repeat;
-    background-position-x: 10px;
-    background-position-y: 6px;
+    padding-top: 20px; /* Adjusted padding */
+    background-image: linear-gradient(to bottom, #dbeee2, #ffffff);
+    border: 2px solid #333; /* Added border */
+    margin: 2px; /* Added space around nav */
     /*background-attachment: fixed;*/
 
     /*padding: 10px;*/
