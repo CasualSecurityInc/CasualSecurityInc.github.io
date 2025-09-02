@@ -145,3 +145,38 @@ nav {
 
 aside {
 }
+
+@media (max-width: 800px) {
+    header, main, footer {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        order: 1; /* Show content first */
+    }
+
+    .sidebar {
+        order: 2; /* Show sidebar/nav second */
+        width: auto; /* Allow sidebar to take full width */
+        border-right: none; /* Remove the side border */
+        border-bottom: 2px solid #a89680; /* Add a bottom border for separation */
+    }
+}
