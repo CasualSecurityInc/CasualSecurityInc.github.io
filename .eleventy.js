@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ [`${designDir}/styles`]: "styles" });
   eleventyConfig.addPassthroughCopy({ [`${designDir}/images`]: "images" });
+  eleventyConfig.addPassthroughCopy({ ["static"]: "/" });
 
   return {
     dir: {

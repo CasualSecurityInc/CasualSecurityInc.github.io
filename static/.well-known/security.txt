@@ -1,0 +1,4 @@
+Contact: https://signal.me/#eu/dfMrN4SDMZd6KWAs6eRUByprA3cfHUQHuyOi7GQvi80tk3VtziVD567n8rWldZU1
+Expires: 2026-09-03T06:37:00.000Z
+Encryption: https://keybase.io/conny/pgp_keys.asc
+Preferred-Languages: en, sv
