@@ -1,0 +1,294 @@
+:root {
+    /* BeOS / Industrial Inspired Palette */
+    --bg-color: #2b3d54;
+    /* Deep Slate Blue */
+    --window-bg: #dcdcdc;
+    /* Standard Grey */
+    --sidebar-bg: #c0c0c0;
+
+    --border-light: #ffffff;
+    --border-dark: #666666;
+    --border-black: #000000;
+
+    --accent-yellow: #ffcc00;
+    /* BeOS Yellow */
+    --accent-blue: #336699;
+    /* Title Blue */
+    --accent-red: #cc3333;
+
+    --text-main: #000000;
+}
+
+body {
+    font-family: "Segoe UI", "Dejavu Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    background-color: var(--bg-color);
+    /* Dotted grid pattern for desktop feel */
+    background-image: radial-gradient(#4a5e78 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The "Window" Container */
+main {
+    width: 900px;
+    max-width: 95vw;
+    background-color: var(--window-bg);
+    border-top: 1px solid var(--border-light);
+    border-left: 1px solid var(--border-light);
+    border-right: 2px solid var(--border-black);
+    border-bottom: 2px solid var(--border-black);
+    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5);
+    display: flex;
+    position: relative;
+    margin: 50px auto;
+}
+
+/* The Yellow "Tab" Title Bar */
+header {
+    background: linear-gradient(to bottom, #ffdb4d, var(--accent-yellow));
+    color: #000;
+    padding: 0 10px;
+    /* Remove vertical padding to let flex align items */
+    border-top: 1px solid #ffff80;
+    border-left: 1px solid #ffff80;
+    border-right: 1px solid #997a00;
+    border-bottom: 0;
+
+    position: absolute;
+    /* Height (28) + Padding (0) + Border (1) = 29px? No border top is 1. 28+1 = 29. 
+       Let's stick to explicit calculation.
+       If height is 28px, and we want it to sit on top.
+       Top should be -(28 + 1) = -29px. 
+       Let's make it 28px height. */
+    top: -29px;
+    left: -1px;
+    right: -2px;
+    width: auto;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+
+    /* Rounded top corners for window look */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+display: flex;
+align-items: center;
+
+/* Rounded top corners for tab look */
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+z-index: 10;
+}
+
+header h1 {
+    font-size: 14px;
+    font-weight: 500;
+    /* Lighter */
+    margin: 0;
+    letter-spacing: 0.5px;
+    color: #000;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-dark);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset -2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar nav img {
+    border: 2px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    /* Inset look */
+    border-bottom-color: var(--border-light);
+    background: #fff;
+    padding: 4px;
+    margin-bottom: 20px;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav li {
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.sidebar nav a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    background: linear-gradient(to bottom, #f0f0f0, #dcdcdc);
+    border: 1px solid #999;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        inset 1px 1px 0 #fff;
+    transition: all 0.1s;
+}
+
+.sidebar nav a:hover {
+    color: #000;
+    border-color: #666;
+    background: linear-gradient(to bottom, #fff, #e6e6e6);
+}
+
+.sidebar nav a:active,
+.sidebar nav a.active {
+    background: var(--accent-blue);
+    color: #fff;
+    border-color: #003366;
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.4),
+        0 1px 0 rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    flex-grow: 1;
+    padding: 30px 40px;
+    background-color: #fff;
+    color: #000;
+    overflow-y: auto;
+    /* Inset content area */
+    border-left: 1px solid var(--border-light);
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: var(--accent-blue);
+    border-bottom: 2px solid var(--accent-yellow);
+    margin-top: 0;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+footer {
+    display: none;
+}
+
+/* Status Bar Footer */
+body>footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: var(--window-bg);
+    border-top: 1px solid var(--border-light);
+    padding: 4px 12px;
+    font-size: 11px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 800px) {
+    body {
+        background: var(--window-bg);
+        /* Full grey on mobile */
+        justify-content: flex-start;
+        padding-bottom: 30px;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        flex-direction: column;
+    }
+
+    header {
+        position: static;
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        background: var(--accent-blue);
+        color: #fff;
+        border-bottom: 3px solid var(--accent-yellow);
+        justify-content: center;
+    }
+
+    header h1 {
+        color: #fff;
+        text-shadow: none;
+        font-size: 1.1rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        background: #eee;
+    }
+
+    .sidebar nav {
+        width: 100%;
+    }
+
+    .sidebar nav img {
+        display: none;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .sidebar nav a {
+        padding: 6px 16px;
+        font-size: 0.9rem;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
+}

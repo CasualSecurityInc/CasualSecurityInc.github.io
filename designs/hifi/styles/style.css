@@ -1,0 +1,267 @@
+:root {
+    /* Hi-Fi CDE Palette - Refined & Tighter */
+    --bg-color: #dbe4eb;
+    --bg-gradient-start: #dbe4eb;
+    --bg-gradient-end: #8a9cb8;
+    
+    --header-bg: #4d9cb0; /* Slightly more vibrant teal */
+    --header-border-light: #afd4dc;
+    --header-border-dark: #2a5560;
+    
+    --main-bg: #b0a099; /* Smooth tan */
+    --main-border-light: #e6dacd;
+    --main-border-dark: #8c7b72;
+    
+    --sidebar-border: #8c7b72;
+    --content-border: #8c7b72;
+    
+    --text-color: #222;
+    --text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+    
+    --accent-active: #000080;
+    --accent-hover: #004455;
+    
+    /* Spacing & Sizing */
+    --border-width: 1px; /* Thinner, tighter */
+    --border-width-thick: 2px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(to bottom, var(--bg-gradient-start), var(--bg-gradient-end));
+    background-attachment: fixed;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: #fff;
+    padding: 12px; /* Increased padding slightly for breathability */
+    text-align: center;
+    border-top: var(--border-width-thick) solid var(--header-border-light);
+    border-left: var(--border-width-thick) solid var(--header-border-light);
+    border-right: var(--border-width-thick) solid var(--header-border-dark);
+    border-bottom: var(--border-width-thick) solid var(--header-border-dark);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #fff;
+    text-shadow: 
+        0 2px 0 #2a5560,
+        0 4px 12px rgba(0,0,0,0.2);
+    font-size: 1.6rem;
+    position: relative;
+    top: -1px; /* Optical adjustment */
+}
+
+header a {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.1s ease;
+}
+
+header a:active {
+    transform: translateY(1px);
+}
+
+main {
+    max-width: 960px;
+    margin: 30px auto;
+    background-color: var(--main-bg);
+    border: var(--border-width) solid var(--main-border-dark);
+    box-shadow: 
+        inset 1px 1px 0px 0px var(--main-border-light),
+        inset -1px -1px 0px 0px var(--main-border-dark),
+        0 10px 30px rgba(0,0,0,0.2); /* Deep shadow for floating window effect */
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+}
+
+/* Window Title Bar Fake */
+main::before {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(to right, var(--main-border-light), var(--main-border-dark));
+    position: absolute;
+    top: -4px;
+    left: -1px; /** borders are 1px */
+    right: -1px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.sidebar {
+    width: 240px;
+    border-right: var(--border-width) solid var(--sidebar-border);
+    display: flex;
+    flex-shrink: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.1), transparent);
+}
+
+.sidebar nav {
+    flex: 1 1 auto;
+    padding-top: 20px;
+}
+
+.sidebar nav img {
+    margin-bottom: 10px;
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1));
+    transition: filter 0.3s ease;
+}
+
+.sidebar nav img:hover {
+    filter: drop-shadow(0 6px 8px rgba(0,0,0,0.2));
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0 20px 20px 20px;
+    margin: 0;
+}
+
+.sidebar nav li {
+    margin-bottom: 6px;
+}
+
+.sidebar nav a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: all 0.15s ease-out;
+}
+
+.sidebar nav a:hover {
+    background-color: rgba(255,255,255,0.3);
+    border-color: rgba(255,255,255,0.6);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transform: translateX(2px);
+}
+
+.sidebar nav a.active {
+    background-color: var(--accent-active);
+    color: #ffffff;
+    border-color: #000060;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+.content {
+    padding: 30px 40px;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+h2 {
+    background: linear-gradient(to right, #efa46f, #d88850);
+    color: #ffffff;
+    padding: 6px 12px;
+    margin: -30px -40px 30px -40px; /* Bleed to edges */
+    border-bottom: 2px solid #b79370;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+p {
+    margin-bottom: 1.2em;
+}
+
+footer {
+    background-color: #bc878f; 
+    color: #f1f1f1;
+    padding: 12px;
+    text-align: center;
+    margin-top: 30px;
+    border-top: var(--border-width-thick) solid #cfc2c7; 
+    border-left: var(--border-width-thick) solid #cfc2c7; 
+    border-right: var(--border-width-thick) solid #685461; 
+    border-bottom: var(--border-width-thick) solid #685461; 
+    font-size: 0.9em;
+    font-weight: 500;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    header, main, footer {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        border-width: 0; /* Flatten on mobile */
+        box-shadow: none;
+    }
+    
+    body {
+        background: var(--main-bg); /* Simplify background */
+    }
+
+    header {
+        margin: 0;
+        border-bottom: 2px solid var(--header-border-dark);
+    }
+
+    main {
+        flex-direction: column;
+        margin: 0;
+        box-shadow: none;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--sidebar-border);
+        background: rgba(0,0,0,0.05); /* Slight darkening for distinction */
+    }
+    
+    .sidebar nav {
+        padding-top: 10px;
+    }
+    
+    .sidebar nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    
+    .sidebar nav img {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 10px auto;
+    }
+    
+    .content h2 {
+        border-radius: 0;
+    }
+}

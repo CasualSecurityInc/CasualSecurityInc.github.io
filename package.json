@@ -9,7 +9,11 @@
     "start:cyber": "DESIGN=cyber eleventy --serve",
     "build": "npm run build:retro",
     "build:retro": "DESIGN=retro eleventy",
-    "build:cyber": "DESIGN=cyber eleventy"
+    "build:cyber": "DESIGN=cyber eleventy",
+    "start:hifi": "DESIGN=hifi eleventy --serve",
+    "build:hifi": "DESIGN=hifi eleventy",
+    "start:next": "DESIGN=next eleventy --serve",
+    "build:next": "DESIGN=next eleventy"
   },
   "keywords": [],
   "author": "",
