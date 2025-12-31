@@ -6,7 +6,8 @@ body {
     /* Better readability */
     background-color: #c9d2d9;
     background-image: linear-gradient(to bottom, #c9d2d9, #506080);
-    color: #36271e;
+    color: #111111;
+    /* Darkened from #36271e for better "pop" */
     margin: 0;
     padding: 0;
     display: flex;
