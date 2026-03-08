@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://csi.ninzin.net/sitemap.xml
