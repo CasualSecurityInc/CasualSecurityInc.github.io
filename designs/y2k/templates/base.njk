@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header>
+        <a href="/"><h1>Casual Security Incorporated</h1></a>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <nav>
+                <img src="/images/gizmos.png" alt="Install Wizard Gizmos" width="132" height="132">
+                <ul>
+                    <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+                    {# <li><a href="/about/" {% if page.url == "/about/" %}class="active"{% endif %}>About</a></li> #}
+                    {# <li><a href="/cv/" {% if page.url == "/cv/" %}class="active"{% endif %}>CV</a></li> #}
+                    <li><a href="/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="content">
+            {{ content | safe }}
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 CSInc | <a href="/">Home</a> | <a href="/contact/">Contact</a> | Best viewed in 1024x768</p>
+    </footer>
+</body>
+</html>

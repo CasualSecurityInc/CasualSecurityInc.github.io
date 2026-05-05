@@ -13,7 +13,11 @@
     "start:hifi": "DESIGN=hifi eleventy --serve",
     "build:hifi": "DESIGN=hifi eleventy",
     "start:next": "DESIGN=next eleventy --serve",
-    "build:next": "DESIGN=next eleventy"
+    "build:next": "DESIGN=next eleventy",
+    "start:cde": "DESIGN=cde eleventy --serve",
+    "build:cde": "DESIGN=cde eleventy",
+    "start:y2k": "DESIGN=y2k eleventy --serve",
+    "build:y2k": "DESIGN=y2k eleventy"
   },
   "keywords": [],
   "author": "",
