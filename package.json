@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start:retro",
+    "start": "npm run start:workstation",
     "start:retro": "DESIGN=retro eleventy --serve",
     "start:cyber": "DESIGN=cyber eleventy --serve",
-    "build": "npm run build:retro",
+    "build": "npm run build:workstation",
     "build:retro": "DESIGN=retro eleventy",
     "build:cyber": "DESIGN=cyber eleventy",
     "start:hifi": "DESIGN=hifi eleventy --serve",

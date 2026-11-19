@@ -1,7 +1,7 @@
 const process = require("process");
 
 module.exports = function (eleventyConfig) {
-  const design = process.env.DESIGN || "retro";
+  const design = process.env.DESIGN || "workstation";
   const designDir = `designs/${design}`;
 
   eleventyConfig.addPassthroughCopy({ [`${designDir}/styles`]: "styles" });
