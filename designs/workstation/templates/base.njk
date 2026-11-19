@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="window">
+        <header><a href="/">Casual Security Incorporated</a></header>
+        <main>
+            <aside>
+                <img class="wizard" src="/images/wiz.png" alt="" width="188" height="351">
+                <nav aria-label="Main navigation">
+                    {% for label, url in { Home: "/", Contact: "/contact/" } %}
+                    <a href="{{ url }}"{% if page.url == url %} aria-current="page"{% endif %}>{{ label }}</a>
+                    {% endfor %}
+                </nav>
+            </aside>
+            <article tabindex="0" aria-label="{{ title }}">{{ content | safe }}</article>
+        </main>
+        <footer><img src="/images/gizmos.png" alt="" width="26" height="26"> &copy; 2025 CSInc</footer>
+    </div>
+</body>
+</html>

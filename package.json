@@ -17,6 +17,8 @@
     "start:cde": "DESIGN=cde eleventy --serve",
     "build:cde": "DESIGN=cde eleventy",
     "start:y2k": "DESIGN=y2k eleventy --serve",
+    "start:workstation": "DESIGN=workstation eleventy --serve",
+    "build:workstation": "DESIGN=workstation eleventy",
     "build:y2k": "DESIGN=y2k eleventy"
   },
   "keywords": [],

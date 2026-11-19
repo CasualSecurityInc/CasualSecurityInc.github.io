@@ -27,7 +27,7 @@ jobs:
         run: npm ci
 
       - name: Build website
-        run: npm run build:retro
+        run: npm run build:workstation
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

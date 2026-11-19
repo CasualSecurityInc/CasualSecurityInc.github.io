@@ -5,13 +5,12 @@ title: CSInc - Home
 
 ## Straightforward IT Ops and Cybersecurity
 
-Focused engagements that keep systems running and secure: practical help, clear advice, measurable improvements. That's the CSInc philosophy.
+CSInc helps businesses and organizations track down IT problems, identify where information is exposed, and decide what to fix first.
 
-- **Cybersecurity assessments** (OSINT recon and external exposure discovery; web and API reviews aligned to OWASP; cloud configuration checks with clear repro steps and prioritized fixes)
-- **Wi‑Fi and network performance assessments** (onsite surveys of coverage, interference, throughput and capacity)
-- **IT operations troubleshooting and improvements** (device access and network issues, router optimization)
-- **Software and infrastructure consulting** (architecture reviews, right‑sized recommendations)
+- **Security reviews.** CSInc reviews websites, APIs, and cloud configurations. Findings explain what was accessible, how CSInc verified the exposure, and what needs to change.
+- **Wi-Fi and networks.** Wi-Fi works at reception but drops out upstairs? CSInc can check coverage, interference, and capacity before you spend money on another access point.
+- **Systems and infrastructure.** CSInc can help get a Linux server back online, review a network design, or give you a second opinion on a software change, including AI integration.
 
-You’ll get a concise report and an action plan you can execute. Start with a short assessment — no retainers, no lock‑in.
+What’s giving you trouble? Happy to take a look.
 
-**[Contact us for a consultation](/contact/)**
+**[Get in touch](/contact/)**
