@@ -8,7 +8,10 @@
 * { box-sizing: border-box; }
 body {
     margin: 0;
-    padding: clamp(16px, 7vh, 72px) 16px;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr);
+    place-items: center;
+    padding: 6px 16px;
     color: #292c32;
     background-color: #555d70;
     background-image: linear-gradient(145deg, #738097 0%, #555d70 52%, #393d50 100%);
@@ -47,7 +50,7 @@ header::after {
     background: repeating-linear-gradient(0deg, #80a4a6 0 1px, transparent 1px 4px);
 }
 header a { color: inherit; text-decoration: none; }
-main { display: grid; grid-template-columns: 188px minmax(0, 1fr); gap: 8px; margin: 8px 3px; }
+main { display: grid; grid-template-columns: 188px minmax(0, 1fr); min-height: 0; gap: 8px; margin: 8px 3px; }
 aside, article, footer { border: 1px solid; border-color: var(--shadow) var(--light) var(--light) var(--shadow); }
 aside { overflow-y: auto; background: #a69da0; }
 .wizard { display: block; width: 100%; height: auto; }
@@ -70,10 +73,29 @@ article li + li { margin-top: .55em; }
 article li::marker { color: var(--teal); }
 article a { color: #075762; text-underline-offset: 3px; }
 article > :last-child { margin-bottom: 0; }
+.home > ul {
+    display: grid;
+    gap: 8px;
+    padding: 0;
+}
+.home > ul > li {
+    padding: 9px 12px 9px 30px;
+    margin: 0;
+    border: 1px solid;
+    border-color: #fffaf0 #9a8e84 #9a8e84 #fffaf0;
+    background: #e8e0d5;
+    list-style-position: inside;
+    text-indent: -18px;
+}
+.home > ul > li::marker {
+    color: var(--teal);
+    font-size: 1.1em;
+}
+.home > ul > li > strong { color: #254b51; }
 footer { display: flex; align-items: center; gap: 8px; margin: 0 3px 2px; padding: 2px 8px; font: 12px/1.4 monospace; }
 a:focus-visible { outline: 3px solid #d57927; outline-offset: 1px; }
 @media (max-width: 650px) {
-    body { padding: 20px clamp(10px, 3vw, 18px); }
+    body { padding-inline: clamp(10px, 3vw, 18px); }
     header { padding: 8px; }
     main { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); gap: 12px; margin: 12px 2px; }
     aside { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }

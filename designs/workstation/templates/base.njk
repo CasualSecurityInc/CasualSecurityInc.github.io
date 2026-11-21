@@ -18,7 +18,7 @@
                     {% endfor %}
                 </nav>
             </aside>
-            <article tabindex="0" aria-label="{{ title }}">{{ content | safe }}</article>
+            <article{% if page.url == "/" %} class="home"{% endif %} tabindex="0" aria-label="{{ title }}">{{ content | safe }}</article>
         </main>
         <footer><img src="/images/gizmos.png" alt="" width="26" height="26"> &copy; 2025 CSInc</footer>
     </div>
